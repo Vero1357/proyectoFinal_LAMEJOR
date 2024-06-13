@@ -39,17 +39,16 @@ class Catalogo:
          return False
 
     def eliminar_producto (self, codigo):
-         for producto in self.productos:
-              if producto ['codigo'] == codigo:
-                 self.productos.remove(producto)
-              print()
-              print("Producto eliminado correctamente")
-              return True
-         print()
-         print ("Producto no encontrado")
-         return False
+        for producto in self.productos:
+            if producto ['codigo'] == codigo:
+               self.productos.remove(producto)
+               print()
+               print("Producto eliminado correctamente")
+               return True
+               print()
+               print ("Producto no encontrado")
+        return False
     
-
 
     def listar_productos(self):
          for producto in self.productos:
@@ -69,8 +68,8 @@ catalogo.agregar_producto(20 , "Asado", 25, 2500, "asado.jpg", 2003)
 
 
 catalogo.listar_productos()
-
-catalogo.eliminar_producto(20)
-
+print()
+catalogo.eliminar_producto(15)
+print()
 catalogo.listar_productos()
 

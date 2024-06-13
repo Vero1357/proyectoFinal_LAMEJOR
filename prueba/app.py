@@ -59,6 +59,23 @@ class Catalogo:
           print(f"Precio     :{producto['precio']}")
           print(f"Imagen     :{producto['imagen']}")
           print(f"Proveedor  :{producto['proveedor']}")
+          print ("-"*50)
+
+
+
+    def mostrar_producto(self, codigo):
+        producto = self.consultar_producto(codigo)
+        if producto:
+            print ("-"*50)
+            print(f"Codigo     :{producto['codigo']}")
+            print(f"Descripcion:{producto['descripcion']}")
+            print(f"Cantidad   :{producto['cantidad']}")
+            print(f"Precio     :{producto['precio']}")
+            print(f"Imagen     :{producto['imagen']}")
+            print(f"Proveedor  :{producto['proveedor']}")
+            print ("-"*50)
+        else:
+            print ("Producto no encotrado.")
      
 
 catalogo = Catalogo()
@@ -66,10 +83,14 @@ catalogo = Catalogo()
 catalogo.agregar_producto(15 , "Sorrentinos", 10, 1500, "sorrentinos.jpg", 1004)
 catalogo.agregar_producto(20 , "Asado", 25, 2500, "asado.jpg", 2003)
 
+catalogo.mostrar_producto(10)
 
-catalogo.listar_productos()
-print()
-catalogo.eliminar_producto(15)
-print()
-catalogo.listar_productos()
+
+
+#catalogo.listar_productos()
+#print()
+#catalogo.eliminar_producto(15)
+#print()3
+#catalogo.listar_productos()
+
 

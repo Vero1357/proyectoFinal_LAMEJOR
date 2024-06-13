@@ -1,8 +1,43 @@
-# defino lista de productos
+import mysql.connector
 
 class Catalogo:
 
-    productos = []
+    def __init__(self, host, user, password, database):
+        self.conn = mysql.connector.connect (
+            host = host,
+            user = user,
+            password = password,
+            database = database
+
+        )
+        
+        self.cursor = self.conn.cursor()
+
+        try:
+            self.cursor.execute(f"USE {database}")
+        except mysql.connector.Error as err:
+
+            if err.errno == mysql.connector.errocode.ER_BAD_DB_ERROR:
+                self.cursor.execute(f"CREATE DATABASE IF NOT EXISTS {database}")
+                self.coon.database = database
+            else:
+                raise err
+        
+        self.cursor.execute ('''CREATE TABLE IF NOT EXISTS productos (
+                                codigo INT AUTO_INCREMENT PRIMARY KEY,
+                                descripcion VARCHAR(255) NOT NULL,
+                                cantidad INT NOT NULL,
+                                precio DECIMAL(10, 2) NOT NULL,
+                                imagen_url VARCHAR(255),
+                                proveedor INT) ''')
+        
+        self.coon.commit ()
+
+        self.cursor.close ()
+        self.cursor = self.coon.cursor(dictionary = True)
+
+
+
 
     def agregar_producto (self, codigo, descripcion, cantidad, precio, imagen, proveedor):
     
@@ -78,7 +113,7 @@ class Catalogo:
             print ("Producto no encotrado.")
      
 
-catalogo = Catalogo()
+catalogo = Catalogo(host='localhost', user='root', password='root', database='lamejor')
 
 catalogo.agregar_producto(15 , "Sorrentinos", 10, 1500, "sorrentinos.jpg", 1004)
 catalogo.agregar_producto(20 , "Asado", 25, 2500, "asado.jpg", 2003)
@@ -87,10 +122,10 @@ catalogo.mostrar_producto(10)
 
 
 
-#catalogo.listar_productos()
-#print()
-#catalogo.eliminar_producto(15)
-#print()3
-#catalogo.listar_productos()
+# catalogo.listar_productos()
+# print()
+# catalogo.eliminar_producto(15)
+# print()3
+# catalogo.listar_productos()
 
 

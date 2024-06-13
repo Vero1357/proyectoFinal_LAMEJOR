@@ -61,8 +61,22 @@ class Catalogo:
                 return True
                 print()
                 print ("Producto no encontrado")
-            return False
+        return False
     
+    def mostrar_producto (self, codigo):
+        producto = self.consultar_producto(codigo)
+        if producto:
+            print("-" * 50)
+            print(f"Codigo     :{producto['codigo']}")
+            print(f"Descripcion:{producto['descripcion']}")
+            print(f"Cantidad   :{producto['cantidad']}")
+            print(f"Precio     :{producto['precio']}")
+            print(f"Imagen     :{producto['imagen']}")
+            print(f"Proveedor  :{producto['proveedor']}")
+            print("-"*50)  
+        else:
+            print("Producto no encontrado.")
+
 
 catalogo = Catalogo()
 
@@ -73,12 +87,15 @@ catalogo.agregar_producto(12, "Chorizo", 30, 1200, "chorizo.jpeg", 2003)
 catalogo.agregar_producto(13, "Empanadas", 43, 700, "empanadas.jpeg", 3001)
 catalogo.agregar_producto(14, "locro", 8, 9800, "locro.jpeg", 1004)
 print()
-print("listado de productos:")
+# print("listado de productos:")
+# catalogo.listar_productos()
+# print()
+# print("datos de un producto:")
+# catalogo.mostrar_producto(20)
+# catalogo.eliminar_producto(20)
+# print()
+# print("listado de productos:")
 catalogo.listar_productos()
-print()
-print("datos de un producto:")
-catalogo.mostrar_producto(20)
-catalogo.eliminar_producto(20)
-print()
-print("listado de productos:")
-catalogo.listar_productos()
+catalogo.mostrar_producto(13)
+
+

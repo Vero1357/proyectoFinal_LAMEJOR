@@ -7,7 +7,7 @@
 
 body {
     font-family: Mon;
-    background-color: #1d1a39;
+    background-color: #cc861d;
     color:white;
 }
 
@@ -25,6 +25,12 @@ body {
     margin-top: 120px;
 }
 
+#logo{
+    height: 100px;
+    width: 100px;
+    
+}
+
 .navbar-index{
     margin: 0;
     padding: 0;
@@ -32,7 +38,7 @@ body {
     top: 0;
     width: 100vw;
     height: 100px;
-    background-color: #390E8C;
+    background-color: #8b3a0a;
     display: flex;
     justify-content: flex-start;
     align-items: center; 
@@ -40,17 +46,17 @@ body {
     overflow: hidden;
     margin-bottom: 20px;
     position: fixed !important; 
-    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+    box-shadow: 10px 10px 20px rgba(165, 71, 9, 0.5);
 }
 
-.logo-nav{height: 80%;
+.logo-nav{height: 60%;
     overflow: hidden;
     margin-left: 1em;
 }
 
 p {
     font-family: 'Times New Roman', Times, serif;
-    background-color: #f9f9f9;
+    background-color: #e2ba64;
     max-width: 400px;
     margin: 0 auto;
     padding: 20px;
@@ -58,15 +64,16 @@ p {
 
 h1, h2, h3, h4, h5, h6 {
     text-align: center;
-    color: #ffd200;
+    color: #422804;
 }
 
 form {
     max-width: 400px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #390e8c;
-    border: 1px solid lightslategray;
+    background-color: #8b3a0a;
+    ;
+    border: 1px solid rgb(223, 220, 39);
     border-radius: 5px;
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
 }
@@ -75,8 +82,8 @@ table {
     max-width: 90%;
     margin: 0 auto;
     padding: 20px;
-    background-color: #390e8c;
-    border: 1px solid lightslategray;
+    background-color: #8b3a0a;
+    border: 1px solid rgb(63, 26, 5);
     border-radius: 5px;
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
 }
@@ -98,7 +105,7 @@ textarea {
 
 input[type="submit"] {
     padding: 10px;
-    background-color: #007bff;
+    background-color: #c7703e;
     color: #ffffff;
     border: none;
     border-radius: 5px;
@@ -106,13 +113,13 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-    background-color: #0056b3;
+    background-color: #c7703e;
 }
 
 button {
     padding: 8px;
     margin:4px;
-    background-color: #007bff;
+    background-color: #c7703e;
     color: #ffffff;
     border: none;
     border-radius: 5px;
@@ -120,14 +127,14 @@ button {
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #c7703e;
 }
 
 a {
     padding: 8px;
     margin:4px;
     background-color: #fdab13;
-    color: #1d1a39;
+    color: #381f0a;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -137,6 +144,6 @@ a {
 }
 
 a:hover {
-    background-color: #1d1a39;
-    color:#fdab13
+    background-color: #86571a;
+    color:#bba57c
 }

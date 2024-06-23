@@ -28,7 +28,14 @@ body {
 #logo{
     height: 100px;
     width: 100px;
+    border-radius: 55%;
     
+}
+
+.miniatura{
+    width: 80px;
+    height: 80px;
+    border-radius: 25px;
 }
 
 .navbar-index{

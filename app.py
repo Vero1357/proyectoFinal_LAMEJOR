@@ -1,6 +1,6 @@
 #--------------------------------------------------------------------
 # Instalar con pip install Flask
-from flask import Flask, request, jsonify, render_template
+from flask import Flask, request, jsonify
 #from flask import request
 
 # Instalar con pip install flask-cors
@@ -16,8 +16,6 @@ from werkzeug.utils import secure_filename
 import os
 import time
 #--------------------------------------------------------------------
-
-
 
 app = Flask(__name__)
 CORS(app)  # Esto habilitará CORS para todas las rutas
@@ -126,7 +124,7 @@ catalogo = Catalogo(host='lamejor.mysql.pythonanywhere-services.com', user='lame
 #RUTA_DESTINO = './static/imagenes/'
 
 #Al subir al servidor, deberá utilizarse la siguiente ruta. USUARIO debe ser reemplazado por el nombre de usuario de Pythonanywhere
-RUTA_DESTINO = '/home/lamejor/mysite/static/imagenes'
+RUTA_DESTINO = '/home/lamejor/mysite/static/imagenes/'
 
 
 #--------------------------------------------------------------------

@@ -1,12 +1,13 @@
 /* Estilos para todo el proyecto */
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 *{
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Merienda', sans-serif;
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    font-family: Mon;
     background-color: #cc861d;
     color:white;
 }
@@ -32,21 +33,26 @@ body {
     
 }
 
+
+
 footer {
-    position: relative;
+    position:relative;
     background-color: chocolate;
 }
 
 .miniatura{
-    width: 80px;
-    height: 80px;
+    width: 110px;
+    height: 60px;
     border-radius: 25px;
+}
+
+.columnas{
+    width: 100px;
 }
 
 .navbar-index{
     margin: 0;
-    padding: 0;
-    
+    padding: 0; 
     top: 0;
     width: 100vw;
     height: 100px;
@@ -67,8 +73,8 @@ footer {
 }
 
 p {
-    font-family: 'Times New Roman', Times, serif;
-    background-color: #c57636;
+    font-family: 'Merienda', Times, serif;
+    background-color:chocolate;
     max-width: 400px;
     margin: 0 auto;
     padding: 20px;
@@ -76,8 +82,7 @@ p {
 
 .redes {
     text-align: center;
-    color: #422804;
-   
+    color: black;
 }
 
 .imagenes_home {
@@ -90,7 +95,7 @@ p {
  
 h1, h2, h3, h4, h5, h6 {
     text-align: center;
-    color: #332006;
+    color: black;
 }
 
 
@@ -99,7 +104,6 @@ form {
     margin: 0 auto;
     padding: 20px;
     background-color: #8b3a0a;
-    ;
     border: 1px solid rgb(223, 220, 39);
     border-radius: 5px;
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);

@@ -32,6 +32,11 @@ body {
     
 }
 
+footer {
+    position: relative;
+    background-color: chocolate;
+}
+
 .miniatura{
     width: 80px;
     height: 80px;
@@ -56,23 +61,38 @@ body {
     box-shadow: 10px 10px 20px rgba(165, 71, 9, 0.5);
 }
 
-.logo-nav{height: 60%;
+.logo-nav{height: 80%;
     overflow: hidden;
     margin-left: 1em;
 }
 
 p {
     font-family: 'Times New Roman', Times, serif;
-    background-color: #e2ba64;
+    background-color: #c57636;
     max-width: 400px;
     margin: 0 auto;
     padding: 20px;
-}
+} 
 
-h1, h2, h3, h4, h5, h6 {
+.redes {
     text-align: center;
     color: #422804;
+   
 }
+
+.imagenes_home {
+    width: 150px;
+    height: 100px;
+    border-radius: 15px 45px 15px 45px;
+    text-align: center;
+}
+
+ 
+h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+    color: #332006;
+}
+
 
 form {
     max-width: 400px;

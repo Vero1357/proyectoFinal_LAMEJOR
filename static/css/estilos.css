@@ -68,7 +68,7 @@ footer {
 
 p {
     font-family: 'Times New Roman', Times, serif;
-    background-color: #e2ba64;
+    background-color: #c57636;
     max-width: 400px;
     margin: 0 auto;
     padding: 20px;
@@ -77,7 +77,7 @@ p {
 .redes {
     text-align: center;
     color: #422804;
-
+   
 }
 
 .imagenes_home {
@@ -87,12 +87,12 @@ p {
     text-align: center;
 }
 
-
-
+ 
 h1, h2, h3, h4, h5, h6 {
     text-align: center;
-    color: #422804;
+    color: #332006;
 }
+
 
 form {
     max-width: 400px;

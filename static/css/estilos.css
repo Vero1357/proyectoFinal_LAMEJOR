@@ -48,6 +48,12 @@ footer {
 
 .columnas{
     width: 100px;
+    
+}
+
+.columnas_2{
+    width: 110px;
+    font-size: 20px;
 }
 
 .navbar-index{
@@ -69,7 +75,7 @@ footer {
 
 .logo-nav{height: 80%;
     overflow: hidden;
-    margin-left: 1em;
+    
 }
 
 p {

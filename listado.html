@@ -5,31 +5,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Listado de Productos 🚀</title>
+    <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&family=Oleo+Script:wght@400;700&family=Yanone+Kaffeesatz:wght@200..700&display=swap" rel="stylesheet">
+    <title>Listado de Comidas</title>
     <link rel="stylesheet" href="./static/css/estilos.css">
 </head>
 
 <body>
     <header>
         <nav class="navbar-index ">
-            <img class="logo-nav" src="./static/imagenes/logos-nav.webp" alt="logo agencia de aprendizaje">
+            <img class="logo-nav" src="./static/imagenes/icons8-ensalada.gif" alt="logo">
+            <img class="imagenes_home" src="./static/imagenes/LaMejor.jpg" alt="lamejor">
+            <img class="imagenes_home" src="./static/imagenes/primerRestaurant.jpg" alt="primerRestaurant">
+            <img class="imagenes_home" src="./static/imagenes/lobo_noche.webp" alt="lobo_noche">
+            <img class="imagenes_home" src="./static/imagenes/LaMejor.jpg" alt="lamejor">
+            <img class="imagenes_home" src="./static/imagenes/vino.jpg" alt="vino">
+            <img class="imagenes_home" src="./static/imagenes/cena_1.png" alt="cena">
+            <img class="imagenes_home" src="./static/imagenes/LaMejor.jpg" alt="lamejor">
+            <img class="imagenes_home" src="./static/imagenes/bsas_2.jpeg" alt="bsas">
+            <img class="logo-nav" src="./static/imagenes/icons8-ensalada.gif" alt="logo"> 
         </nav>
     </header>
 
     <div class="logo-centrado">
-        <img src="./static/imagenes/logo_Codo.jpg" alt="logo">
+        <img id="logo" src="./static/imagenes/logo.png" alt="logo La Mejor">
     </div>
-    <h1>Listado de Productos del Inventario</h1><br>
+    <h1>Listado de Comidas</h1><br>
 
     <table> <!-- Se crea una tabla para mostrar los productos. -->
         <thead> <!--Encabezado de la tabla con columnas para código, descripción, cantidad, precio y acciones.-->
             <tr>
-                <th>Código</th>
-                <th>Descripción</th>
-                <th>Cantidad</th>                
-                <th align="right">Precio</th>
-                <th>Imagen</th>
-                <th align="right">Proveedor</th>
+                <th class="columnas">Código</th>
+                <th class="columnas">Descripción</th>
+                <th class="columnas">Cantidad</th>                
+                <th class="columnas">Precio</th>
+                <th class="columnas">Imagen</th>
+                <th class="columnas">Proveedor</th>
                 
             </tr>
         </thead>
@@ -41,10 +51,10 @@
     </div>
 
     <script>
-        const URL = "http://127.0.0.1:5000/"
+        // const URL = "http://127.0.0.1:5000/"
 
         // Al subir al servidor, deberá utilizarse la siguiente ruta. USUARIO debe ser reemplazado por el nombre de usuario de Pythonanywhere
-        //const URL = "https://USUARIO.pythonanywhere.com/"
+        const URL = "https://lamejor.pythonanywhere.com/"
         
 
         // Realizamos la solicitud GET al servidor para obtener todos los productos.
@@ -66,16 +76,21 @@
                 // Iteramos sobre cada producto y agregamos filas a la tabla
                 for (let producto of data) {
                     let fila = document.createElement('tr'); //Crea una nueva fila de tabla (<tr>) para cada producto.
-                    fila.innerHTML = '<td>' + producto.codigo + '</td>' +
-                        '<td>' + producto.descripcion + '</td>' +
-                        '<td align="right">' + producto.cantidad + '</td>' +
-                        '<td align="right">' + producto.precio + '</td>' +
+                    fila.innerHTML = '<td align=center>' + producto.codigo + '</td>' +
+                        '<td align=rigth>' + producto.descripcion + '</td>' +
+                        '<td align="center">' + producto.cantidad + '</td>' +
+                        '<td align="rigth">' +"$ "+ producto.precio + '</td>' +
+                      
+                      
                         // Mostrar miniatura de la imagen
-                        '<td><img src=./static/imagenes/' + producto.imagen_url +' alt="Imagen del producto" style="width: 100px;"></td>' + '<td align="right">' + producto.proveedor + '</td>';
+                        // '<td><img src=./static/imagenes/' + producto.imagen_url +' alt="Imagen del producto" style="width: 100px;"></td>' + '<td align="right">' + producto.proveedor + '</td>';
+                         // Reemplaza la ruta de la imagen con una ruta relativa correcta o absoluta
+                        '<td align=center><img src="' + URL + 'static/imagenes/' + producto.imagen_url + '" alt="Imagen del producto" class="miniatura"></td>' +
                         
-                        //Al subir al servidor, deberá utilizarse la siguiente ruta. USUARIO debe ser reemplazado por el nombre de usuario de Pythonanywhere
-                        //'<td><img src=https://www.pythonanywhere.com/user/USUARIO/files/home/USUARIO/mysite/static/imagenes/' + producto.imagen_url +' alt="Imagen del producto" style="width: 100px;"></td>' + '<td align="right">' + producto.proveedor + '</td>';
-                    
+                        //Al subir al servidor, deberá utilizarse la siguiente ruta. USUARIO debe ser reemplazado por el nombre de usuario de Pythonanywhere + 
+                        //'<td><img src=https://www.pythonanywhere.com/user/lamejor/files/home/lamejor/mysite/static/imagenes/' + producto.imagen_url + 'alt="Imagen del producto" style="width: 100px;"></td>' +
+                        '<td align="center">' + producto.proveedor + '</td>';
+
                     //Una vez que se crea la fila con el contenido del producto, se agrega a la tabla utilizando el método appendChild del elemento tablaProductos.
                     tablaProductos.appendChild(fila);
                 }

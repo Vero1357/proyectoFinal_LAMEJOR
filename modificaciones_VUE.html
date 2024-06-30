@@ -5,21 +5,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modificar Producto 🚀</title>
+    <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&family=Oleo+Script:wght@400;700&family=Yanone+Kaffeesatz:wght@200..700&display=swap" rel="stylesheet">
+    <title>Modificar Comida</title>
     <link rel="stylesheet" href="./static/css/estilos.css">
 </head>
 
 <body>
     <header>
         <nav class="navbar-index ">
-            <img class="logo-nav" src="./static/imagenes/logos-nav.webp" alt="logo agencia de aprendizaje">
+            <img class="logo-nav" src="./static/imagenes/icons8-ensalada.gif" alt="logo">
         </nav>
     </header>
 
     <div class="logo-centrado">
-        <img src="./static/imagenes/logo_Codo.jpg" alt="logo">
+        <img id="logo" src="./static/imagenes/logo.png" alt="logo La Mejor">
     </div>
-    <h1>Modificar Productos del Inventario</h1><br>
+    <h1>Modificar Comida del Menú</h1><br>
 
     <!-- Contenedor principal que será controlado por Vue.js. Este contenedor tendrá dos formularios. -->
     <div id="app">
@@ -27,12 +28,12 @@
         <form @submit.prevent="obtenerProducto">
             <label for="codigo">Código:</label>
             <input type="text" v-model="codigo" required><br>
-            <button type="submit">Modificar Producto</button> <a href="index.html">Menu principal</a>
+            <button type="submit">Modificar Comida</button> <a href="index.html">Menu principal</a>
         </form>
 
         <!-- Segundo formulario: se muestra solo si mostrarDatosProducto es verdadero. Llama a la función guardarCambios -->
         <div v-if="mostrarDatosProducto">
-            <h2>Datos del Producto</h2>
+            <h2>Datos de la Comida</h2>
             <form @submit.prevent="guardarCambios">
                 <label for="descripcionModificar">Descripción:</label>
                 <input type="text" id="descripcionModificar" v-model="descripcion" required><br>
@@ -48,8 +49,8 @@
                     alt="Imagen del producto" style="max-width: 200px;">
                 
                 <!-- Al subir al servidor, deberá utilizarse la siguiente ruta. USUARIO debe ser reemplazado por el nombre de usuario de Pythonanywhere -->
-                <!-- <img v-if="imagen_url && !imagenSeleccionada" :src="'https://www.pythonanywhere.com/user/USUARIO/files/home/USUARIO/mysite/static/imagenes/' + imagen_url"
-                    alt="Imagen del producto" style="max-width: 200px;"> -->
+                <img v-if="imagen_url && !imagenSeleccionada" :src="'https://www.pythonanywhere.com/user/lamejor/files/home/lamejor/mysite/static/imagenes/' + imagen_url"
+                    alt="Imagen del producto" style="max-width: 200px;"> 
                              
 
                 <!-- Vista previa de la nueva imagen seleccionada -->
@@ -72,10 +73,10 @@
 
     <script src="https://unpkg.com/vue@3.0.0"></script>
     <script>
-        const URL = "http://127.0.0.1:5000/"
+        // const URL = "http://127.0.0.1:5000/"
 
         //Al subir al servidor, deberá utilizarse la siguiente ruta. USUARIO debe ser reemplazado por el nombre de usuario de Pythonanywhere
-        //const URL = "https://USUARIO.pythonanywhere.com/"
+        const URL = "https://lamejor.pythonanywhere.com/"
         
 
         //Vue.createApp para crear nuestra aplicación Vue.

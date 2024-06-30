@@ -5,30 +5,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eliminar Productos 🚀</title>
+    <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&family=Oleo+Script:wght@400;700&family=Yanone+Kaffeesatz:wght@200..700&display=swap" rel="stylesheet">
+    <title>Eliminar Comida</title>
     <link rel="stylesheet" href="./static/css/estilos.css">
 </head>
 
 <body>
     <header>
         <nav class="navbar-index">
-            <img class="logo-nav" src="./static/imagenes/logos-nav.webp" alt="logo agencia de aprendizaje">
+            <img class="logo-nav" src="./static/imagenes/icons8-ensalada.gif" alt="logo">
+            <img class="imagenes_home" src="./static/imagenes/LaMejor.jpg" alt="lamejor">
+            <img class="imagenes_home" src="./static/imagenes/primerRestaurant.jpg" alt="primerRestaurant">
+            <img class="imagenes_home" src="./static/imagenes/lobo_noche.webp" alt="lobo_noche">
+            <img class="imagenes_home" src="./static/imagenes/LaMejor.jpg" alt="lamejor">
+            <img class="imagenes_home" src="./static/imagenes/vino.jpg" alt="vino">
+            <img class="imagenes_home" src="./static/imagenes/cena_1.png" alt="cena">
+            <img class="imagenes_home" src="./static/imagenes/LaMejor.jpg" alt="lamejor">
+            <img class="imagenes_home" src="./static/imagenes/bsas_2.jpeg" alt="bsas">
+            <img class="logo-nav" src="./static/imagenes/icons8-ensalada.gif" alt="logo"> 
         </nav>
     </header>
 
     <div class="logo-centrado">
-        <img src="./static/imagenes/logo_Codo.jpg" alt="logo">
+        <img id="logo" src="./static/imagenes/logo.png" alt="logo La Mejor">
     </div>
-    <h1>Eliminar Productos del Inventario</h1><br>
+    <h1>Eliminar Comida del Menú</h1><br>
 
     <table id="productos-table"> <!-- Se crea una tabla para mostrar los productos. -->
         <thead> <!--Encabezado de la tabla con columnas para código, descripción, cantidad, precio y acciones.-->
             <tr>
-                <th>Código</th>
-                <th>Descripción</th>
-                <th>Cantidad</th>
-                <th align="right">Precio</th>
-                <th>Acciones</th>
+                <th class="columnas_2"">Código</th>
+                <th class="columnas_2">Descripción</th>
+                <th class="columnas_2">Cantidad</th>
+                <th class="columnas_2">Precio</th>
+                <th class="columnas_2">Acciones</th>
             </tr>
         </thead>
         <tbody>
@@ -40,10 +50,10 @@
     </div>
 
     <script>
-        const URL = "http://127.0.0.1:5000/"
+        // const URL = "http://127.0.0.1:5000/"
 
         //Al subir al servidor, deberá utilizarse la siguiente ruta. USUARIO debe ser reemplazado por el nombre de usuario de Pythonanywhere
-        //const URL = "https://USUARIO.pythonanywhere.com/"
+        const URL = "https://lamejor.pythonanywhere.com/"
         
         // Obtiene el contenido del inventario
         function obtenerProductos() {
@@ -59,11 +69,11 @@
                     data.forEach(producto => {
                         const row = productosTable.insertRow();
                         row.innerHTML = `
-                            <td>${producto.codigo}</td>
-                            <td>${producto.descripcion}</td>
-                            <td>${producto.cantidad}</td>
-                            <td align="right">${producto.precio}</td>
-                            <td><button onclick="eliminarProducto('${producto.codigo}')">Eliminar</button></td>
+                            <td align=center>${producto.codigo}</td>
+                            <td align=rigth>${producto.descripcion}</td>
+                            <td align=center>${producto.cantidad}</td>
+                            <td align=center> $ ${producto.precio}</td>
+                            <td align=center><button onclick="eliminarProducto('${producto.codigo}')">Eliminar</button></td>
                         `;
                     });
                 })

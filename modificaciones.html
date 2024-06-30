@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&family=Oleo+Script:wght@400;700&family=Yanone+Kaffeesatz:wght@200..700&display=swap" rel="stylesheet">
     <title>Modificar Comida</title>
     <link rel="stylesheet" href="./static/css/estilos.css">
 </head>
@@ -13,6 +14,15 @@
     <header>
         <nav class="navbar-index ">
             <img class="logo-nav" src="./static/imagenes/icons8-ensalada.gif" alt="logo">
+            <img class="imagenes_home" src="./static/imagenes/LaMejor.jpg" alt="lamejor">
+            <img class="imagenes_home" src="./static/imagenes/primerRestaurant.jpg" alt="primerRestaurant">
+            <img class="imagenes_home" src="./static/imagenes/lobo_noche.webp" alt="lobo_noche">
+            <img class="imagenes_home" src="./static/imagenes/LaMejor.jpg" alt="lamejor">
+            <img class="imagenes_home" src="./static/imagenes/vino.jpg" alt="vino">
+            <img class="imagenes_home" src="./static/imagenes/cena_1.png" alt="cena">
+            <img class="imagenes_home" src="./static/imagenes/LaMejor.jpg" alt="lamejor">
+            <img class="imagenes_home" src="./static/imagenes/bsas_2.jpeg" alt="bsas">
+            <img class="logo-nav" src="./static/imagenes/icons8-ensalada.gif" alt="logo"> 
         </nav>
     </header>
 
@@ -44,11 +54,12 @@
                 <input type="number" step="0.01" id="precioModificar" required><br>
 
                 <!-- Imagen actual del producto - Debe comentarse al subirse al servidor-->
-                <img id="imagen-actual" style="max-width: 200px; display: none;">                                 
+                <img id="imagen-actual" style="max-width: 200px; display: none;">
+                <!-- <img id="imagen-actual" src="https://www.pythonanywhere.com/user/lamejor/files/home/lamejor/mysite/static/imagenes/" style="max-width: 200px; display: none;">                          -->
 
                 <!-- Vista previa de la nueva imagen seleccionada -->
                 <img id="imagen-vista-previa" src="https://www.pythonanywhere.com/user/lamejor/files/home/lamejor/mysite/static/imagenes/" style="max-width: 200px; display: none;">
-                <!-- <img id="imagen-vista-previa" style="max-width: 200px; display: none;"> -->
+                <img id="imagen-vista-previa" style="max-width: 200px; display: none;">
 
                 <!-- Input para nueva imagen -->
                 <label for="nuevaImagen">Nueva Imagen:</label>
@@ -122,15 +133,15 @@
                 const imagenActual = document.getElementById('imagen-actual');
                 if (imagen_url && !imagenSeleccionada) { // Verifica si imagen_url no está vacía y no se ha seleccionado una imagen
                     
-                    imagenActual.src = './static/imagenes/' + imagen_url;
+                    // imagenActual.src = './static/imagenes/' + imagen_url;
                     
                     //Al subir al servidor, deberá utilizarse la siguiente ruta. USUARIO debe ser reemplazado por el nombre de usuario de Pythonanywhere
                     imagenActual.src = 'https://www.pythonanywhere.com/user/lamejor/files/home/lamejor/mysite/static/imagenes/' + imagen_url;
                     
                     imagenActual.style.display = 'block'; // Muestra la imagen actual
-                } else {
-                    imagenActual.style.display = 'none'; // Oculta la imagen si no hay URL
-                }
+                }  else {
+                      imagenActual.style.display = 'none'; // Oculta la imagen si no hay URL
+                    }
 
                 document.getElementById('datos-producto').style.display = 'block';
             } else {

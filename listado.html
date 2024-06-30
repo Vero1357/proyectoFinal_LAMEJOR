@@ -5,9 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link
-    href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&family=Oleo+Script:wght@400;700&family=Yanone+Kaffeesatz:wght@200..700&display=swap"
-    rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&family=Oleo+Script:wght@400;700&family=Yanone+Kaffeesatz:wght@200..700&display=swap" rel="stylesheet">
     <title>Listado de Comidas</title>
     <link rel="stylesheet" href="./static/css/estilos.css">
 </head>
@@ -80,15 +78,17 @@
                     let fila = document.createElement('tr'); //Crea una nueva fila de tabla (<tr>) para cada producto.
                     fila.innerHTML = '<td align=center>' + producto.codigo + '</td>' +
                         '<td align=rigth>' + producto.descripcion + '</td>' +
-                        '<td align=center>' + producto.cantidad + '</td>' +
-                        '<td align=rigth>' +"$ "+ producto.precio + '</td>' +
+                        '<td align="center">' + producto.cantidad + '</td>' +
+                        '<td align="rigth">' +"$ "+ producto.precio + '</td>' +
+                      
+                      
                         // Mostrar miniatura de la imagen
                         // '<td><img src=./static/imagenes/' + producto.imagen_url +' alt="Imagen del producto" style="width: 100px;"></td>' + '<td align="right">' + producto.proveedor + '</td>';
                          // Reemplaza la ruta de la imagen con una ruta relativa correcta o absoluta
                         '<td align=center><img src="' + URL + 'static/imagenes/' + producto.imagen_url + '" alt="Imagen del producto" class="miniatura"></td>' +
                         
                         //Al subir al servidor, deberá utilizarse la siguiente ruta. USUARIO debe ser reemplazado por el nombre de usuario de Pythonanywhere + 
-                        // '<td><img src=https://www.pythonanywhere.com/user/lamejor/files/home/lamejor/mysite/static/imagenes/' + producto.imagen_url + 'alt="Imagen del producto" style="width: 100px;"></td>' +
+                        //'<td><img src=https://www.pythonanywhere.com/user/lamejor/files/home/lamejor/mysite/static/imagenes/' + producto.imagen_url + 'alt="Imagen del producto" style="width: 100px;"></td>' +
                         '<td align="center">' + producto.proveedor + '</td>';
 
                     //Una vez que se crea la fila con el contenido del producto, se agrega a la tabla utilizando el método appendChild del elemento tablaProductos.

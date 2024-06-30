@@ -8,6 +8,7 @@
 }
 
 body {
+    font-family: Mon;
     background-color: #cc861d;
     color:white;
 }
@@ -33,10 +34,8 @@ body {
     
 }
 
-
-
 footer {
-    position:relative;
+    position: relative;
     background-color: chocolate;
 }
 
@@ -58,7 +57,7 @@ footer {
 
 .navbar-index{
     margin: 0;
-    padding: 0; 
+    padding: 0;
     top: 0;
     width: 100vw;
     height: 100px;
@@ -66,7 +65,6 @@ footer {
     display: flex;
     justify-content: flex-start;
     align-items: center; 
-    
     overflow: hidden;
     margin-bottom: 20px;
     position: fixed !important; 
@@ -89,6 +87,7 @@ p {
 .redes {
     text-align: center;
     color: black;
+   
 }
 
 .imagenes_home {
